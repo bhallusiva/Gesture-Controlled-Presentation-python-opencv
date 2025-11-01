@@ -54,7 +54,7 @@ It uses **Computer Vision** techniques to detect hand gestures and translate the
 
 ---
 
-🖐️ Gesture Controls
+🖐️ **Gesture Controls**
 Gesture | Action
 ------- | --------
 👉 Index Finger Up | Draw annotations
