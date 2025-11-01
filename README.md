@@ -43,4 +43,58 @@ It uses **Computer Vision** techniques to detect hand gestures and translate the
    ```bash
    git clone https://github.com/bhallusiva/gesture-controlled-presentation.git
    cd gesture-controlled-presentation
+2.**Installation Dependecies**
+   pip install opencv-python cvzone mediapipe numpy
+3.**Add your iles**
+   * Create a folder named `Presentation` inside the project directory.
+   * Add your slide images (e.g., `.jpg`, `.png`) in that folder.
+```
+4.Run the program
+   python gesture_presentation.py
 
+---
+
+🖐️ Gesture Controls
+Gesture | Action
+------- | --------
+👉 Index Finger Up | Draw annotations
+🤞 Index + Middle Fingers | Pointer Mode
+🖐️ All Five Fingers | Hide / Show window
+👆 Index Finger (Top of Screen) | Change slides (Next/Previous)
+✋ Three Fingers | Erase last annotation
+🤙 Thumb + Index | Auto slide
+```
+
+---
+
+🧩 Folder Structure
+
+gesture-controlled-presentation/
+│
+├── gesture_presentation.py        # Main Python file
+├── Presentation/                  # Folder containing presentation slide images
+├── README.md                      # Project documentation
+└── requirements.txt                # (Optional) Dependency list
+
+
+🚀 **Future Enhancements**
+
+      * Add gesture customization for personalized controls
+      
+      * Integrate with Microsoft PowerPoint / Google Slides directly
+      
+      * Improve detection accuracy and performance
+      
+      * Add voice command support for hybrid control
+
+👨‍💻 **Author**
+
+Siva Bhallu
+📧 bhallusivakumar@gmail.com
+🌐 https://www.linkedin.com/in/siva-bhallu-333836305/
+
+⭐ Don’t forget to star this repo if you like it!
+
+
+
+         
