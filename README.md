@@ -105,4 +105,4 @@ gesture-controlled-presentation/
 📧 [bhallusivakumar@gmail.com](mailto:bhallusivakumar@gmail.com)
 🌐 [LinkedIn Profile](https://www.linkedin.com/in/siva-bhallu-333836305/)
 
-⭐ *Don’t forget to star this repo if you like it!* ⭐
+⭐ *Don’t forget to star this repo if you like it!*⭐
