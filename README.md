@@ -1,27 +1,27 @@
 # 🖐️ Gesture-Controlled Presentation
 
-A computer-vision application that lets users control presentation slides using **hand gestures** instead of a keyboard or mouse.
+A real-time **computer-vision presentation controller** that lets users navigate and interact with presentation slides using hand gestures instead of a keyboard or mouse.
 
-The project uses a webcam to detect hand landmarks and translates gestures into presentation actions such as navigation, annotation, erasing and pointer control.
+The project combines webcam video processing, hand-landmark detection and gesture recognition to translate physical hand movements into presentation commands.
 
 ## ✨ Features
 
-- 👉 Navigate to the next or previous slide
-- ✍️ Draw annotations directly on slides
+- 👉 Next / previous slide navigation
+- ✍️ Draw annotations on slides
 - 🧹 Erase annotations
-- 🤞 Pointer/highlight mode
-- 🖐️ Hide/show the presentation window
+- 🤞 Pointer / highlight mode
+- 🖐️ Hide / show presentation window
 - 🔄 Gesture-based automatic slide control
-- 🎥 Real-time webcam-based interaction
+- 🎥 Real-time webcam interaction
 
-## 🧠 How It Works
+## 🧠 System Flow
 
 ```text
 Webcam
    ↓
 Video Frame Capture
    ↓
-Hand Detection & Landmark Tracking
+Hand Landmark Detection
    ↓
 Gesture Recognition
    ↓
@@ -36,44 +36,9 @@ Slide / Annotation Update
 |---|---|
 | Python | Application logic |
 | OpenCV | Webcam capture and image processing |
-| cvzone | Simplified hand-tracking utilities |
+| cvzone | Hand-tracking utilities |
 | MediaPipe | Hand landmark detection |
-| NumPy | Array and coordinate operations |
-
-## ⚙️ Setup
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/bhallusiva/Gesture-Controlled-Presentation-python-opencv.git
-cd Gesture-Controlled-Presentation-python-opencv
-```
-
-### 2. Install dependencies
-
-```bash
-pip install opencv-python cvzone mediapipe numpy
-```
-
-If a `requirements.txt` file is present, you can instead run:
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Add presentation slides
-
-Create a `Presentation/` directory and place the slide images used by the application inside it.
-
-### 4. Run the application
-
-Use the project's main Python entry point, for example:
-
-```bash
-python gesture_presentation.py
-```
-
-> The exact entry-point filename may vary depending on the current project files.
+| NumPy | Coordinate and array operations |
 
 ## 🖐️ Gesture Controls
 
@@ -83,31 +48,59 @@ python gesture_presentation.py
 | ✌️ Index + middle fingers | Pointer mode |
 | 🖐️ Five fingers | Hide / show presentation |
 | Three-finger gesture | Erase annotation |
-| Specific navigation gesture | Next / previous slide |
-| Specific automation gesture | Auto-slide mode |
+| Navigation gesture | Next / previous slide |
+| Automation gesture | Auto-slide mode |
 
-## 📁 Project Structure
+> Gesture mappings can be adjusted as the project evolves.
 
-```text
-Gesture-Controlled-Presentation-python-opencv/
-├── gesture_presentation.py
-├── Presentation/
-├── requirements.txt
-└── README.md
+## ⚙️ Setup
+
+### 1. Clone
+
+```bash
+git clone https://github.com/bhallusiva/Gesture-Controlled-Presentation-python-opencv.git
+cd Gesture-Controlled-Presentation-python-opencv
 ```
+
+### 2. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+If `requirements.txt` is unavailable in your local checkout:
+
+```bash
+pip install opencv-python cvzone mediapipe numpy
+```
+
+### 3. Prepare presentation assets
+
+Create a `Presentation/` directory and place the slide images required by the application inside it.
+
+### 4. Run
+
+Run the project's Python entry point from the repository root.
+
+## 🎓 Engineering Concepts Practiced
+
+- Real-time video processing
+- Computer vision
+- Hand landmark detection
+- Gesture recognition
+- Coordinate-based interaction
+- Event-driven application logic
+- Integrating multiple Python libraries into one application
 
 ## 🚀 Future Improvements
 
 - PowerPoint / Google Slides integration
 - Customizable gesture mappings
-- Better gesture recognition accuracy
+- Improved gesture recognition accuracy
 - Voice + gesture hybrid control
-- Improved performance and cross-platform support
+- Better performance and cross-platform support
+- Modular gesture-processing architecture
 
-## 🎯 Learning Outcomes
+## 👨‍💻 Author
 
-This project helped me practice **computer vision, real-time video processing, hand landmark detection, coordinate-based interaction and event-driven application logic**.
-
----
-
-**Author:** [Siva Bhallu](https://github.com/bhallusiva)
+**Siva Bhallu** — [GitHub](https://github.com/bhallusiva)
