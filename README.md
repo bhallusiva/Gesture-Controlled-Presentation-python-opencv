@@ -1,48 +1,52 @@
-# 🖐️ Gesture Controlled Presentation
+# 🖐️ Gesture-Controlled Presentation
 
-A **Python + OpenCV** project that allows users to control presentation slides using **hand gestures**.
-You can move between slides, draw annotations, erase them, or even toggle the presentation webcam — all through gestures, no keyboard or mouse needed!
+A computer-vision application that lets users control presentation slides using **hand gestures** instead of a keyboard or mouse.
 
----
-
-## 🎯 Overview
-
-This project provides a **gesture-based control system** for presentations using your webcam.
-It uses **Computer Vision** techniques to detect hand gestures and translate them into presentation commands such as next/previous slide, drawing, erasing, and toggling webcam visibility.
-
----
+The project uses a webcam to detect hand landmarks and translates gestures into presentation actions such as navigation, annotation, erasing and pointer control.
 
 ## ✨ Features
 
-* 👆 **Navigate Slides:** Move to next or previous slides using hand gestures
-* ✍️ **Annotate:** Draw on slides with your index finger
-* ✋ **Erase:** Remove annotations using three fingers
-* 🖐️ **Hide/Show:** Raise all five fingers to toggle presentation visibility
-* 🤞 **Pointer Mode:** Highlight points on the slide without drawing
-* 🎥 **Webcam Feed:** Display your webcam feed along with slides
-* 🔁 **Auto Slide Mode:** Automatically switch slides using specific gestures
+- 👉 Navigate to the next or previous slide
+- ✍️ Draw annotations directly on slides
+- 🧹 Erase annotations
+- 🤞 Pointer/highlight mode
+- 🖐️ Hide/show the presentation window
+- 🔄 Gesture-based automatic slide control
+- 🎥 Real-time webcam-based interaction
 
----
+## 🧠 How It Works
 
-## 🧠 Tech Stack & Libraries Used
+```text
+Webcam
+   ↓
+Video Frame Capture
+   ↓
+Hand Detection & Landmark Tracking
+   ↓
+Gesture Recognition
+   ↓
+Presentation Command
+   ↓
+Slide / Annotation Update
+```
 
-| Library          | Purpose                                                                          |
-| ---------------- | -------------------------------------------------------------------------------- |
-| **Python**       | Main programming language for the project                                        |
-| **OpenCV (cv2)** | Used for setting up the webcam, capturing frames, and displaying slides          |
-| **NumPy**        | Handles mathematical and array manipulations for image and coordinate operations |
-| **cvzone**       | Provides `HandTrackingModule` for easy hand gesture detection                    |
-| **MediaPipe**    | Used internally by `cvzone` to detect and track hand landmarks efficiently       |
+## 🛠️ Tech Stack
 
----
+| Technology | Purpose |
+|---|---|
+| Python | Application logic |
+| OpenCV | Webcam capture and image processing |
+| cvzone | Simplified hand-tracking utilities |
+| MediaPipe | Hand landmark detection |
+| NumPy | Array and coordinate operations |
 
-## ⚙️ Installation & Setup
+## ⚙️ Setup
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/bhallusiva/gesture-controlled-presentation.git
-cd gesture-controlled-presentation
+git clone https://github.com/bhallusiva/Gesture-Controlled-Presentation-python-opencv.git
+cd Gesture-Controlled-Presentation-python-opencv
 ```
 
 ### 2. Install dependencies
@@ -51,58 +55,59 @@ cd gesture-controlled-presentation
 pip install opencv-python cvzone mediapipe numpy
 ```
 
-### 3. Add your slides
+If a `requirements.txt` file is present, you can instead run:
 
-* Create a folder named `Presentation` inside the project directory
-* Add your slide images (e.g., `.jpg`, `.png`) inside that folder
+```bash
+pip install -r requirements.txt
+```
 
-### 4. Run the program
+### 3. Add presentation slides
+
+Create a `Presentation/` directory and place the slide images used by the application inside it.
+
+### 4. Run the application
+
+Use the project's main Python entry point, for example:
 
 ```bash
 python gesture_presentation.py
 ```
 
----
+> The exact entry-point filename may vary depending on the current project files.
 
 ## 🖐️ Gesture Controls
 
-| Gesture                         | Action                        |
-| ------------------------------- | ----------------------------- |
-| 👉 Index Finger Up              | Draw annotations              |
-| 🤞 Index + Middle Fingers       | Pointer Mode                  |
-| 🖐️ All Five Fingers            | Hide / Show window            |
-| 👆 Index Finger (Top of Screen) | Change slides (Next/Previous) |
-| ✋ Three Fingers                 | Erase last annotation         |
-| 🤙 Thumb + Index                | Auto slide                    |
+| Gesture | Action |
+|---|---|
+| ☝️ Index finger | Draw / interact |
+| ✌️ Index + middle fingers | Pointer mode |
+| 🖐️ Five fingers | Hide / show presentation |
+| Three-finger gesture | Erase annotation |
+| Specific navigation gesture | Next / previous slide |
+| Specific automation gesture | Auto-slide mode |
 
----
+## 📁 Project Structure
 
-## 🧩 Folder Structure
-
-```
-gesture-controlled-presentation/
-│
-├── gesture_presentation.py        # Main Python file
-├── Presentation/                  # Folder containing presentation slide images
-├── README.md                      # Project documentation
-└── requirements.txt                # (Optional) Dependency list
+```text
+Gesture-Controlled-Presentation-python-opencv/
+├── gesture_presentation.py
+├── Presentation/
+├── requirements.txt
+└── README.md
 ```
 
+## 🚀 Future Improvements
+
+- PowerPoint / Google Slides integration
+- Customizable gesture mappings
+- Better gesture recognition accuracy
+- Voice + gesture hybrid control
+- Improved performance and cross-platform support
+
+## 🎯 Learning Outcomes
+
+This project helped me practice **computer vision, real-time video processing, hand landmark detection, coordinate-based interaction and event-driven application logic**.
+
 ---
 
-## 🚀 Future Enhancements
-
-* Add gesture customization for personalized controls
-* Integrate with Microsoft PowerPoint / Google Slides directly
-* Improve detection accuracy and performance
-* Add voice command support for hybrid control
-
----
-
-## 👨‍💻 Author
-
-**Siva Bhallu**
-📧 [bhallusivakumar@gmail.com](mailto:bhallusivakumar@gmail.com)
-🌐 [LinkedIn Profile](https://www.linkedin.com/in/siva-bhallu-333836305/)
-
-⭐ *Don’t forget to star this repo if you like it! *⭐
+**Author:** [Siva Bhallu](https://github.com/bhallusiva)
