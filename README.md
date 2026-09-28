@@ -1,32 +1,32 @@
 # 🖐️ Gesture-Controlled Presentation
 
-A real-time **computer-vision presentation controller** that lets users navigate and interact with presentation slides using hand gestures instead of a keyboard or mouse.
+A real-time computer-vision application that allows users to interact with presentation slides using **hand gestures instead of a keyboard or mouse**.
 
-The project combines webcam video processing, hand-landmark detection and gesture recognition to translate physical hand movements into presentation commands.
+The project captures webcam frames, detects hand landmarks, recognizes gestures and translates them into presentation commands.
 
 ## ✨ Features
 
 - 👉 Next / previous slide navigation
-- ✍️ Draw annotations on slides
+- ✍️ Slide annotation
 - 🧹 Erase annotations
-- 🤞 Pointer / highlight mode
-- 🖐️ Hide / show presentation window
-- 🔄 Gesture-based automatic slide control
-- 🎥 Real-time webcam interaction
+- 🤞 Pointer / highlight interaction
+- 🖐️ Presentation visibility control
+- 🔄 Gesture-based presentation control
+- 🎥 Real-time webcam processing
 
 ## 🧠 System Flow
 
 ```text
 Webcam
-   ↓
-Video Frame Capture
-   ↓
+  ↓
+Frame Capture
+  ↓
 Hand Landmark Detection
-   ↓
+  ↓
 Gesture Recognition
-   ↓
+  ↓
 Presentation Command
-   ↓
+  ↓
 Slide / Annotation Update
 ```
 
@@ -35,23 +35,16 @@ Slide / Annotation Update
 | Technology | Purpose |
 |---|---|
 | Python | Application logic |
-| OpenCV | Webcam capture and image processing |
-| cvzone | Hand-tracking utilities |
+| OpenCV | Webcam and image processing |
 | MediaPipe | Hand landmark detection |
+| cvzone | Hand-tracking utilities |
 | NumPy | Coordinate and array operations |
 
-## 🖐️ Gesture Controls
+## 🖐️ Gesture Interaction
 
-| Gesture | Action |
-|---|---|
-| ☝️ Index finger | Draw / interact |
-| ✌️ Index + middle fingers | Pointer mode |
-| 🖐️ Five fingers | Hide / show presentation |
-| Three-finger gesture | Erase annotation |
-| Navigation gesture | Next / previous slide |
-| Automation gesture | Auto-slide mode |
+The application maps different hand configurations to presentation actions such as navigation, pointer interaction, annotation and erasing.
 
-> Gesture mappings can be adjusted as the project evolves.
+Gesture mappings are configurable as the project evolves.
 
 ## ⚙️ Setup
 
@@ -68,7 +61,7 @@ cd Gesture-Controlled-Presentation-python-opencv
 pip install -r requirements.txt
 ```
 
-If `requirements.txt` is unavailable in your local checkout:
+If needed:
 
 ```bash
 pip install opencv-python cvzone mediapipe numpy
@@ -76,29 +69,28 @@ pip install opencv-python cvzone mediapipe numpy
 
 ### 3. Prepare presentation assets
 
-Create a `Presentation/` directory and place the slide images required by the application inside it.
+Create the required presentation/assets directory and place the slide images used by the application inside it.
 
 ### 4. Run
 
 Run the project's Python entry point from the repository root.
 
-## 🎓 Engineering Concepts Practiced
+## 🎓 Engineering Concepts
 
 - Real-time video processing
-- Computer vision
 - Hand landmark detection
 - Gesture recognition
 - Coordinate-based interaction
 - Event-driven application logic
-- Integrating multiple Python libraries into one application
+- Integrating multiple computer-vision libraries
 
 ## 🚀 Future Improvements
 
 - PowerPoint / Google Slides integration
-- Customizable gesture mappings
-- Improved gesture recognition accuracy
-- Voice + gesture hybrid control
-- Better performance and cross-platform support
+- Customizable gesture profiles
+- More robust gesture recognition
+- Voice + gesture interaction
+- Better cross-platform support
 - Modular gesture-processing architecture
 
 ## 👨‍💻 Author
